@@ -82,6 +82,23 @@
             margin: 0 auto;
         }
 
+        .post-photo {
+            background-color: white;
+            padding: 10px;
+            width: 530px;
+            margin:auto;
+           -moz-box-shadow:0px 0px 5px #000000;
+            -webkit-box-shadow:0px 0px 5px #000000;
+            box-shadow:0px 0px 5px #000000;
+            -webkit-transform: rotate(-10deg);
+            -moz-transform: rotate(-10deg);
+        }
+
+        .caption {
+            margin: auto;
+            text-align: center;
+        }
+
         .notesandtags {
             padding: 5px;
             border-top: 1px solid #CCCCCC;
@@ -220,10 +237,12 @@
 
             {block:Photo}
             <div class="post">
-              {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-              {block:Caption}
-              <div class="caption">{Caption}</div>
-              {/block:Caption}
+              <div class="post-photo">
+                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                {block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+              </div>
             </div>
             {/block:Photo}
 
