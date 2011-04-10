@@ -1,320 +1,330 @@
 <html>
-<head>
-  <link rel="shortcut icon" href="{Favicon}">
-    <link rel="alternate" type="application/rss+xml" href="{RSS}">
-      {block:Description}
-      <meta name="description" content="{MetaDescription}" />
-      {/block:Description}
+  <head>
+    <link rel="shortcut icon" href="{Favicon}">
+      <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
 
-<meta name="color:Background" content="#FFFFFF"/">
-<meta name="color:Text" content="#000000"/>
-<meta name="font:Text" content="Helvetica"/>
-<meta name="color:Link" content="#000000"/>
-<meta name="color:Link Hover" content="#EB6841"/>
-<meta name="color:Header" content="#444"/>
-
-
-<style type="text/css">
-
-body {
-background-color: {color:Background};
-background-image: {image:Background};
-font-family: {font:Text};
-font-size: 14px;
-color: {color:Text};
-}
-
-a {
-color: {color:Link};
-font-weight: bold;
-text-decoration: none;
-}
-
-a:hover {
-color: {color:Link Hover};
-}
-
-a img {
-border: 0px;
-}
-
-.content {
-width: 620px;
-padding: 10px;
-background-image: url('/home/david/Dropbox/programming/html/tumblr/my_theme/bg_resized.jpg');
-background-repeat: repeat-y;
-margin: 100px auto;
--moz-box-shadow:0px 0px 5px #000000;
--webkit-box-shadow:0px 0px 5px #000000;
-box-shadow:0px 0px 5px #000000;
--moz-border-radius: 10px;
-border-radius: 10px;
-}
-
-.sidebar {
-position:absolute;
-z-index:-10;
-top: 120px;
-float:left;
-left: 75%;
-margin:auto;
-width: 200px;
-padding: 10px;
-background-color: {color:Header};
-}
-
-.post {
-padding-top:40px;
-}
-
-.post img {
-display: block;
-margin: 0 auto;
-}
-
-.notesandtags {
-padding: 5px;
-border-top: 1px solid #CCCCCC;
-margin-bottom: 5px;
-margin-top: 5px;
-}
-
-.tags {
-font-size: 10px;
-float: right;
-text-transform: lowercase;
-}
-
-.tag {
-font-weight: normal;
-margin-right: 2px;
-font-style: italic;
-}
-
-.time {
-font-size: 10px;
-color: #666;
-text-transform: uppercase;
-font-weight: bold;
-}
-
-h3 {
-font-size: 20px;
-margin: 0px;
-}
-
-blockquote {
-font-size: 11px;
-background-color: {color:Link Hover};
-padding: 5px;
-border-left: 5px solid #CDFF46;
-margin: 5px;
-}
-
-.quote {
-font-family: Georgia;
-font-size: 18px;
-font-style: italic;
-color: {color:Link Hover};
-}
-
-.source {
-margin-left: 25px;
-}
-
-.link {
-background-color: {color:Header}
-color: {color:Link};
-padding: 5px;
-font-size: 18px;
-font-weight: bold;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-font-weight: normal;
-font-style: italic;
-}
-
-.link:hover {
-color: {color:Link Hover};
-}
-
-ul.chat {
-margin: 0;
-padding: 0;
-}
+        <meta name="color:Background" content="#CCCCCC"/">
+        <meta name="color:Text" content="#000000"/>
+        <meta name="font:Text" content="Helvetica"/>
+        <meta name="color:Link" content="#000000"/>
+        <meta name="color:Link Hover" content="#EB6841"/>
+        <meta name="color:Header" content="#444"/>
 
 
+        <style type="text/css">
 
-.label {
-font-weight: bold;
-}
+        body {
+            background-color: {color:Background};
+            background-image: {image:Background};
+            font-family: {font:Text};
+            font-size: 16px;
+            font-smooth: always;
+            color: {color:Text};
+        }
 
-.title {
-position: fixed;
-z-index: 1000;
-top: 0px;
-left: 0px;
-width: 100%;
-padding: 0px;
-padding-left: 200px;
-height: 80px;
-font-size: 60px;
-font-family: Helvetica;
-letter-spacing: -2px;
-color: {color:Text};
-/*background-color: {color:Header};*/
-background-color:rgba(10,10,10,0.9);
--moz-box-shadow:0px 0px 5px #000000;
--webkit-box-shadow:0px 0px 5px #000000;
-box-shadow:0px 0px 10px #000000;
-/*opacity:0.9;
--ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-/*-ms-filter must come before filter*/
-/*filter: alpha(opacity=90);*/
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*All filters must be placed together*/
-}
+        a {
+            color: {color:Link};
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-{CustomCSS}
-</style>
+        a:hover {
+            color: {color:Link Hover};
+        }
+
+        a img {
+            border: 0px;
+        }
+
+        .content {
+            z-index: 100;
+            position: absolute;
+            width: 620px;
+            padding: 10px;
+            margin:auto;
+            background-image: url('themes/paper-bg.jpg');
+            background-repeat: repeat-y;
+            float:left;
+            -moz-box-shadow:0px 0px 5px #000000;
+            -webkit-box-shadow:0px 0px 5px #000000;
+            box-shadow:0px 0px 5px #000000;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            z-index: -10;
+            top: 120px;
+            float:right;
+            margin:50px auto;
+            width: 200px;
+            padding-left: 35px;
+            font-size: 12px;
+            background-image: url('themes/sidebar-bg.jpg');
+            -moz-border-bottom-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            -moz-border-top-right-radius: 10px;
+            border-top-right-radius: 10px;
+           -moz-box-shadow:0px 0px 5px #000000;
+            -webkit-box-shadow:0px 0px 5px #000000;
+            box-shadow:0px 0px 10px #000000;
+        }
+
+        .post {
+            padding-top:40px;
+        }
+
+        .post img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .notesandtags {
+            padding: 5px;
+            border-top: 1px solid #CCCCCC;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        .tags {
+            font-size: 10px;
+            float: right;
+            text-transform: lowercase;
+        }
+
+        .tag {
+            font-weight: normal;
+            margin-right: 2px;
+            font-style: italic;
+        }
+
+        .time {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin: 0px;
+        }
+
+        blockquote {
+            font-size: 11px;
+            background-color: {color:Link Hover};
+            padding: 5px;
+            border-left: 5px solid #CDFF46;
+            margin: 5px;
+        }
+
+        .quote {
+            font-family: Georgia;
+            font-size: 18px;
+            font-style: italic;
+            color: {color:Link Hover};
+        }
+
+        .source {
+            margin-left: 25px;
+        }
+
+        .link {
+            background-color: {color:Header}
+            color: {color:Link};
+            padding: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .link:hover {
+            color: {color:Link Hover};
+        }
+
+        ul.chat {
+            margin: 0;
+            padding: 0;
+        }
 
 
-<title>{Title}</title>
 
-</head>
+        .label {
+            font-weight: bold;
+        }
 
-<body>
+        .title {
+            position: fixed;
+            z-index: 1000;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            padding: 0px;
+            height: 60px;
+            font-size: 40px;
+            font-family: Impact, Charcoal, sans-serif;
+            color: #FFFFFF;
+            background-color:rgba(10,10,10,0.9);
+            -moz-box-shadow:0px 0px 5px #000000;
+            -webkit-box-shadow:0px 0px 5px #000000;
+            box-shadow:0px 0px 10px #000000;
+        }
 
-<div class="title">{Title}</div>
+        .title-pos {
+            width: 850px;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+        .wrapper {
+            width: 850px;
+            margin: 100px auto;
+        }
+
+        . page-nav {
+            margin:auto;
+        }
+
+        {CustomCSS}
+        </style>
 
 
-<div class="content">
+        <title>{Title}</title>
 
-{block:Posts}
+      </head>
+
+      <body>
+
+        <div class="title"><div class="title-pos">{Title}</div></div>
+
+        <div class="wrapper">
+          <div class="content">
+
+            {block:Posts}
 
 
-{block:Text}
-<div class="post">
-{block:Title}
-<h3><a href="{Permalink}">{Title}</a></h3>
-{/block:Title}
-{Body}
-</div>
-{/block:Text}
+            {block:Text}
+            <div class="post">
+              {block:Title}
+              <h3><a href="{Permalink}">{Title}</a></h3>
+              {/block:Title}
+              {Body}
+            </div>
+            {/block:Text}
 
-{block:Photo}
-<div class="post">
-{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-{block:Caption}
-<div class="caption">{Caption}</div>
-{/block:Caption}
-</div>
-{/block:Photo}
+            {block:Photo}
+            <div class="post">
+              {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+              {block:Caption}
+              <div class="caption">{Caption}</div>
+              {/block:Caption}
+            </div>
+            {/block:Photo}
 
-{block:Photoset}
-<div class="post">
-<center>{Photoset-500}</center>
-{block:Caption}
-<div class="caption">{Caption}</div>
-{/block:Caption}
-</div>
-{/block:Photoset}
+            {block:Photoset}
+            <div class="post">
+              <center>{Photoset-500}</center>
+              {block:Caption}
+              <div class="caption">{Caption}</div>
+              {/block:Caption}
+            </div>
+            {/block:Photoset}
 
-{block:Quote}
-<div class="post">
-<span class="quote">"{Quote}"</span>
-{block:Source}
-<div class="source">– {Source}</div>
-{/block:Source}
-</div>
-{/block:Quote}
+            {block:Quote}
+            <div class="post">
+              <span class="quote">"{Quote}"</span>
+              {block:Source}
+              <div class="source">– {Source}</div>
+              {/block:Source}
+            </div>
+            {/block:Quote}
 
-{block:Link}
-<div class="post">
-<center><a href="{URL}" class="link" {Target}>{Name} &#8594;</a></center>
-{block:Description}
-<div class="description">{Description}</div>
-{/block:Description}
-</div>
-{/block:Link}
+            {block:Link}
+            <div class="post">
+              <center><a href="{URL}" class="link" {Target}>{Name}</a></center>
+              {block:Description}
+              <div class="description">{Description}</div>
+              {/block:Description}
+            </div>
+            {/block:Link}
 
-{block:Chat}
-<div class="post">
-{block:Title}
-<h3><a href="{Permalink}">{Title}</a></h3>
-{/block:Title}
-<ul class="chat">
-{block:Lines}
-<li class="{Alt} user_{UserNumber}">
-{block:Label}
-<span class="label">{Label}</span>
-{/block:Label}
-{Line}
-</li>
-{/block:Lines}
-</ul>
-</div>
-{/block:Chat}
+            {block:Chat}
+            <div class="post">
+              {block:Title}
+              <h3><a href="{Permalink}">{Title}</a></h3>
+              {/block:Title}
+              <ul class="chat">
+                {block:Lines}
+                <li class="{Alt} user_{UserNumber}">
+                  {block:Label}
+                  <span class="label">{Label}</span>
+                  {/block:Label}
+                  {Line}
+                </li>
+                {/block:Lines}
+              </ul>
+            </div>
+            {/block:Chat}
 
-{block:Video}
-<div class="post">
-<center>{Video-500}</center>
-{block:Caption}
-<div class="caption">{Caption}</div>
-{/block:Caption}
-</div>
-{/block:Video}
+            {block:Video}
+            <div class="post">
+              <center>{Video-500}</center>
+              {block:Caption}
+              <div class="caption">{Caption}</div>
+              {/block:Caption}
+            </div>
+            {/block:Video}
 
-{block:Audio}
-<div class="post">
-{AudioPlayerBlack}
-{block:Caption}
-<div class="caption">{Caption}</div>
-{/block:Caption}
-</div>
-{/block:Audio}
+            {block:Audio}
+            <div class="post">
+              {AudioPlayerBlack}
+              {block:Caption}
+              <div class="caption">{Caption}</div>
+              {/block:Caption}
+            </div>
+            {/block:Audio}
 
-<div class="notesandtags">
-<div class="time">{block:Date}Posted <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
-<div class="tags">{block:Tags}/<a href="{TagURL}" class="tag">{Tag}</a>/ {/block:Tags} {block:NoteCount}{NoteCount} <font color="#FF038A">&hearts;</font>{/block:NoteCount}</div>
-</div>
-</div>
+            <div class="notesandtags">
+              <div class="time">{block:Date}Posted <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+              <div class="tags">{block:Tags}/<a href="{TagURL}" class="tag">{Tag}</a>/ {/block:Tags} {block:NoteCount}{NoteCount} <font color="#FF038A">&hearts;</font>{/block:NoteCount}</div>
+              </div>
+            </div>
 
-{/block:Posts}
-</div>
+            {/block:Posts}
 
-<div class="sidebar">
+            <div class="page-nav">
+              {block:Pagination}
+              {block:PreviousPage}
+              <a href="{PreviousPage}">Prev</a>
+              {/block:PreviousPage}
 
-<p align="center"><img src="{PortraitURL-128}">
+              {block:NextPage}
+              <a href="{NextPage}">Next</a>
+              {/block:NextPage}
+              {/block:Pagination}
+            </div>
+          </div>
 
-<p align="center">
-{block:AskEnabled}<a href="/ask">{AskLabel}</a>  // {/block:AskEnabled} {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a> // {/block:SubmissionsEnabled} <a href="{RSS}">RSS</a> // <a href="/mobile">Mobile</a> // <a href="/archive">Archive</a>
+          <div class="sidebar">
 
-{block:Description}<p>{Description}{/block:Description}
+            <p align="center"><img src="{PortraitURL-128}">
 
-<p align="center">
+              <p align="center">
+                {block:AskEnabled}<a href="/ask">{AskLabel}</a>  // {/block:AskEnabled} {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a> // {/block:SubmissionsEnabled} <a href="{RSS}">RSS</a> // <a href="/mobile">Mobile</a> // <a href="/archive">Archive</a>
 
-        {block:Pagination}
-            {block:PreviousPage}
-                <a href="{PreviousPage}">&#8592; Previous</a>
-            {/block:PreviousPage}
+                {block:Description}<p>{Description}{/block:Description}
 
-            {block:JumpPagination length="5"}
-                {block:CurrentPage}
-                    <span class="current_page">{PageNumber}</span>
-                {/block:CurrentPage}
+                <p align="center">
 
-                {block:JumpPage}
-                    <a class="jump_page" href="{URL}">{PageNumber}</a>
-                {/block:JumpPage}
-            {/block:JumpPagination}
 
-            {block:NextPage}
-                <a href="{NextPage}">Next &#8594;</a>
-            {/block:NextPage}
-        {/block:Pagination}
 
-</div>
-
-</body>
-</html>
+                </div>
+              </div>
+            </body>
+          </html>
