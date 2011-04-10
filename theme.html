@@ -17,7 +17,7 @@
         <style type="text/css">
         @font-face{
             font-family: Throw;
-            src: url(themes/throw.ttf);
+            src: url("http://static.tumblr.com/6n3vtyr/hRcljfvp6/throw_my_hands_up_in_the_air.ttf");
         }
 
         body {
@@ -49,7 +49,7 @@
             width: 620px;
             padding: 10px;
             margin:auto;
-            background-image: url('themes/paper-bg.jpg');
+            background-image: url('http://static.tumblr.com/6n3vtyr/OFqljfvrn/paper-bg.jpg');
             background-repeat: repeat-y;
             float:left;
             -moz-box-shadow:0px 0px 5px #000000;
@@ -68,7 +68,7 @@
             padding-left: 35px;
             font-size: 12px;
 /*            background-image: url('themes/sidebar-bg.jpg');*/
-            background-color: #8EFA3C;
+            background-color: #D1E751;
             -moz-border-bottom-right-radius: 10px;
             border-bottom-right-radius: 10px;
             -moz-border-top-right-radius: 10px;
@@ -166,12 +166,11 @@
             background-color: {color:Header}
             color: {color:Link};
             padding: 5px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             -moz-border-radius: 5px;
             -webkit-border-radius: 5px;
             font-weight: normal;
-            font-style: italic;
         }
 
         .link:hover {
@@ -279,7 +278,7 @@
 
             {block:Link}
             <div class="post">
-              <center><a href="{URL}" class="link" {Target}>{Name}</a></center>
+              <center><a href="{URL}" class="link" {Target}>{Name} >></a></center>
               {block:Description}
               <div class="description">{Description}</div>
               {/block:Description}
